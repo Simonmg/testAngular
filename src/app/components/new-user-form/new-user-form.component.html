@@ -1,0 +1,30 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <p>
+        <mat-form-field appereance="legacy">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Coloca tu nombre" formControlName="name">
+            <mat-hint>Escuela</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appereance="legacy">
+            <mat-label>Escuela</mat-label>
+            <input matInput placeholder="Coloca tu Esculea" formControlName="escuela">
+            <mat-hint>Escuela</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appereance="legacy">
+            <mat-label>Edad</mat-label>
+            <input matInput placeholder="Coloca tu Edad" formControlName="edad">
+            <mat-hint>Edad</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appereance="legacy">
+            <mat-label>Foto</mat-label>
+            <input matInput placeholder="Url de tu Foto" formControlName="foto">
+            <mat-hint>Url</mat-hint>
+        </mat-form-field>
+    </p>
+</form>
