@@ -7,6 +7,7 @@ import { HttpServiceService } from '../../service/http-service.service';
 })
 export class EstudiantesComponent implements OnInit {
   public estudiantes: Array<any>;
+  public candidatos: Array<any>;
   constructor(
     private apiService: HttpServiceService
   ) { }
@@ -16,6 +17,11 @@ export class EstudiantesComponent implements OnInit {
       .subscribe(async (data) => {
         this.estudiantes = await data;
       });
+    this.candidatos = JSON.parse(localStorage.getItem('candidatos'));
+  }
+
+  loadList($event) {
+    this.candidatos = JSON.parse(localStorage.getItem('candidatos'));
   }
 
 }

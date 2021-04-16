@@ -1,3 +1,15 @@
-<app-user-table 
-    [dataArray]="estudiantes">
-</app-user-table>
+<mat-tab-group (selectedTabChange)="loadList($event)">
+    <mat-tab label="Estudiantes">
+        <app-user-table 
+            [dataArray]="estudiantes">
+        </app-user-table>
+    </mat-tab>
+    <mat-tab label="Anadir estudiante">
+        <app-new-user-form></app-new-user-form>
+    </mat-tab>
+    <mat-tab label="Solicitudes">
+        <app-user-table
+            [dataArray]="candidatos">
+        </app-user-table>
+    </mat-tab>
+</mat-tab-group>

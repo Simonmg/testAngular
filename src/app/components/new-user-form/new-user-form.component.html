@@ -1,30 +1,18 @@
 <form (ngSubmit)="onSubmit()" [formGroup]="form">
     <p>
-        <mat-form-field appereance="legacy">
-            <mat-label>Nombre</mat-label>
-            <input matInput placeholder="Coloca tu nombre" formControlName="name">
-            <mat-hint>Escuela</mat-hint>
-        </mat-form-field>
+        <input matInput placeholder="Coloca tu nombre" formControlName="name">
+    </p>
+            
+    
+    <p>
+        <input matInput placeholder="Coloca tu Esculea" formControlName="patronus">
     </p>
     <p>
-        <mat-form-field appereance="legacy">
-            <mat-label>Escuela</mat-label>
-            <input matInput placeholder="Coloca tu Esculea" formControlName="escuela">
-            <mat-hint>Escuela</mat-hint>
-        </mat-form-field>
+        
+        <input matInput placeholder="Coloca tu Edad" formControlName="age">
     </p>
     <p>
-        <mat-form-field appereance="legacy">
-            <mat-label>Edad</mat-label>
-            <input matInput placeholder="Coloca tu Edad" formControlName="edad">
-            <mat-hint>Edad</mat-hint>
-        </mat-form-field>
+        <input matInput placeholder="Url de tu Foto" formControlName="image">
     </p>
-    <p>
-        <mat-form-field appereance="legacy">
-            <mat-label>Foto</mat-label>
-            <input matInput placeholder="Url de tu Foto" formControlName="foto">
-            <mat-hint>Url</mat-hint>
-        </mat-form-field>
-    </p>
+    <button type="submit" [disabled]="form.invalid">Enviar</button>
 </form>
